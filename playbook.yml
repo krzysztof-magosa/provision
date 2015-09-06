@@ -1,0 +1,38 @@
+---
+# File: playbook.yml
+
+- hosts: osx
+  vars:
+    dotfiles_path: ~/.dotfiles
+
+    brews:
+      - coreutils
+      - emacs
+      - git
+      - midnight-commander
+      - mtr
+      - pyenv
+      - pyenv-virtualenv
+      - python
+      - python3
+      - tig
+      - tree
+      - wget
+
+    applications_path: /Applications
+    applications:
+      - google-chrome
+      - iterm2
+      - vlc
+      - keepassx
+      - lastpass
+      - skype
+      - slack
+      - spotify
+      - tunnelblick
+      - virtualbox
+
+  tasks:
+    - include: tasks/homebrew.yml
+    - include: tasks/dotfiles.yml
+    - include: tasks/shell.yml
