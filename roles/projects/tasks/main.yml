@@ -1,0 +1,10 @@
+---
+# File: roles/projects/tasks/main.yml
+
+- name: Create projects directory
+  file: path={{ projects_path }} state=directory
+
+- name: Create projects categories
+  file: path={{ projects_path }}/{{ item }} state=directory
+  with_items: projects_categories
+  when: projects_categories is defined

@@ -6,6 +6,7 @@
     - homebrew
     - dotfiles
     - shell
+    - projects
 
   vars:
     dotfiles_repo: git@github.com:krzysztof-magosa/dotfiles.git
@@ -37,3 +38,12 @@
       - spotify
       - tunnelblick
       - virtualbox
+
+    projects_path: ~/projects
+    projects_categories:
+      - php
+      - ansible
+      - emacs
+      - playground
+      - sites
+      - vagrant
