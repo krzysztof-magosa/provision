@@ -2,9 +2,13 @@
 # File: tasks/dotfiles.yml
 
 - name: Clone dotfiles
-  git: "repo=git@github.com:krzysztof-magosa/dotfiles.git dest={{ dotfiles_path }} recursive=true"
+  git: "repo={{ dotfiles_repo }} dest={{ dotfiles_path }} recursive=true"
   register: dotfiles
+
+- name: Check if dotfiles contains install.sh
+  stat: path="{{ dotfiles_path }}/install.sh"
+  register: dotfiles_stat
 
 - name: Install dotfiles
   shell: "{{ dotfiles_path }}/install.sh --force"
-  when: dotfiles.changed == true
+  when: dotfiles.changed == true and dotfiles_stat.stat.exists == true

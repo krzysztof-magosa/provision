@@ -3,6 +3,7 @@
 
 - hosts: osx
   vars:
+    dotfiles_repo: git@github.com:krzysztof-magosa/dotfiles.git
     dotfiles_path: ~/.dotfiles
 
     brews:
