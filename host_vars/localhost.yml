@@ -1,0 +1,68 @@
+dotfiles_repo: git@github.com:krzysztof-magosa/dotfiles.git
+dotfiles_path: ~/.dotfiles
+
+brews:
+  - coreutils
+  - emacs
+  - git
+  - midnight-commander
+  - mtr
+  - pyenv
+  - pyenv-virtualenv
+  - python
+  - python3
+  - tig
+  - tree
+  - wget
+
+applications_path: /Applications
+applications:
+  - google-chrome
+  - iterm2
+  - vlc
+  - keepassx
+  - lastpass
+  - skype
+  - slack
+  - spotify
+  - tunnelblick
+  - virtualbox
+
+projects_path: ~/projects
+projects_repos:
+  - name: saffron-php
+    category: php
+    repo: git@github.com:krzysztof-magosa/saffron-php.git
+  - name: company-ansible
+    category: ansible
+    repo: git@github.com:krzysztof-magosa/company-ansible.git
+  - name: repository
+    category: php
+    repo: git@github.com:krzysztof-magosa/repository.git
+  - name: melpa
+    category: emacs
+    repo: git@github.com:krzysztof-magosa/melpa.git
+  - name: magosa.pl
+    category: sites
+    repo: git@github.com:krzysztof-magosa/magosa.pl.git
+  - name: graver
+    category: python
+    repo: git@github.com:krzysztof-magosa/graver.git
+  - name: google-code-jam
+    category: playground
+    repo: git@github.com:krzysztof-magosa/Google-Code-Jam.git
+  - name: huckleberry
+    category: cpp
+    repo: git@github.com:krzysztof-magosa/huckleberry.git
+  - name: miniberry
+    category: cpp
+    repo: git@github.com:krzysztof-magosa/MiniBerry.git
+  - name: metaphore
+    category: php
+    repo: git@github.com:krzysztof-magosa/metaphore.git
+  - name: microbe-cpp
+    category: cpp
+    repo: git@github.com:krzysztof-magosa/microbe-cpp.git
+  - name: microbe
+    category: java
+    repo: git@github.com:krzysztof-magosa/microbe.git
