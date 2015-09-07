@@ -1,0 +1,6 @@
+---
+# File: projects.yml
+
+- hosts: projects
+  roles:
+    - projects

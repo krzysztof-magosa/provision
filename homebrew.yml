@@ -1,0 +1,5 @@
+---
+# File: homebrew.yml
+- hosts: homebrew
+  roles:
+    - homebrew

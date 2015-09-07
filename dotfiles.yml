@@ -1,0 +1,6 @@
+---
+# File: dotfiles.yml
+
+- hosts: dotfiles
+  roles:
+    - dotfiles

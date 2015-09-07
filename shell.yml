@@ -1,0 +1,6 @@
+---
+# File: shell.yml
+
+- hosts: shell
+  roles:
+    - shell
