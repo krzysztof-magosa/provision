@@ -2,7 +2,8 @@
 
 [ -d /opt/ansible ] && exit 0
 
-if [[ ! -x /usr/bin/gcc ]]; then
+xcode-select -p >/dev/null 2>&1
+if [ $? -eq 0 ]; then
     xcode-select --install
 fi
 
