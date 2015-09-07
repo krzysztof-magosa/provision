@@ -1,5 +1,5 @@
 ---
-# File: tasks/shell.yml
+# File: roles/shell/tasks/main.yml
 
 - name: Check current shell
   shell: echo $SHELL

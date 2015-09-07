@@ -1,5 +1,5 @@
 ---
-# File: tasks/homebrew.yml
+# File: roles/homebrew/tasks/main.yml
 
 - name: Check if homebrew is installed
   stat: path=/usr/local/bin/brew

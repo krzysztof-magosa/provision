@@ -2,6 +2,11 @@
 # File: playbook.yml
 
 - hosts: osx
+  roles:
+    - homebrew
+    - dotfiles
+    - shell
+
   vars:
     dotfiles_repo: git@github.com:krzysztof-magosa/dotfiles.git
     dotfiles_path: ~/.dotfiles
@@ -32,8 +37,3 @@
       - spotify
       - tunnelblick
       - virtualbox
-
-  tasks:
-    - include: tasks/homebrew.yml
-    - include: tasks/dotfiles.yml
-    - include: tasks/shell.yml
