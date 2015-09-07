@@ -1,0 +1,6 @@
+---
+# File: roles/homebrew/defaults/main.yml
+
+brews: []
+applications: []
+applications_path: /Applications
