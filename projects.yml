@@ -3,4 +3,6 @@
 
 - hosts: projects
   roles:
-    - projects
+    - role: projects
+      when: projects_path is defined
+
