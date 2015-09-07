@@ -2,6 +2,10 @@
 
 [ -d /opt/ansible ] && exit 0
 
+if [[ ! -x /usr/bin/gcc ]]; then
+    xcode-select --install
+fi
+
 sudo easy_install pip
 sudo pip install pyyaml
 sudo pip install jinja2
