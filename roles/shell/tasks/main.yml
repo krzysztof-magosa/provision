@@ -5,6 +5,6 @@
   shell: echo $SHELL
   register: current_shell
 
-- name: Set zsh as default shell
-  shell: chsh -s /bin/zsh
-  when: current_shell.stdout != '/bin/zsh'
+- name: Set default shell
+  shell: chsh -s {{ shell }}
+  when: current_shell.stdout != "{{ shell }}"

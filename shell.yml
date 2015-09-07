@@ -3,4 +3,6 @@
 
 - hosts: shell
   roles:
-    - shell
+    - role: shell
+      when: shell is defined
+

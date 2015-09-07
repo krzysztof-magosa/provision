@@ -1,0 +1,4 @@
+---
+# File: roles/shell/defaults/main.yml
+
+shell: "/bin/zsh"
