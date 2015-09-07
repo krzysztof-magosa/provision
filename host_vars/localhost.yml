@@ -27,6 +27,7 @@ applications:
   - spotify
   - tunnelblick
   - virtualbox
+  - emacs
 
 projects_path: ~/projects
 projects_repos:
