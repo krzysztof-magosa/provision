@@ -5,14 +5,12 @@ dotfiles_init_cmd: ~/.dotfiles/install.sh --force
 brews:
   - coreutils
   - emacs
-  - git
   - midnight-commander
   - mtr
   - pyenv
   - pyenv-virtualenv
   - python
   - python3
-  - tig
   - tree
   - wget
 

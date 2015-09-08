@@ -1,5 +1,9 @@
 ---
 # File: roles/dev-common/tasks/main.yml
 
-- name: Install tig
-  homebrew: pkg=tig state=present
+- name: Install dev utils
+  homebrew: pkg={{ item }} state=present
+  with_items:
+    - tig
+    - git
+
