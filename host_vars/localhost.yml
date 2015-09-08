@@ -7,10 +7,6 @@ brews:
   - emacs
   - midnight-commander
   - mtr
-  - pyenv
-  - pyenv-virtualenv
-  - python
-  - python3
   - tree
   - wget
 

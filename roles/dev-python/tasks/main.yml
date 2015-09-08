@@ -1,0 +1,10 @@
+---
+# File: roles/dev-python/tasks/main.yml
+
+- name: Install python software
+  homebrew: pkg={{ item }} state=installed
+  with_items:
+    - pyenv
+    - pyenv-virtualenv
+    - python
+    - python3
