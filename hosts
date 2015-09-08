@@ -3,9 +3,6 @@ localhost ansible_connection=local
 [homebrew]
 localhost
 
-[dotfiles]
-localhost
-
 [shell]
 localhost
 

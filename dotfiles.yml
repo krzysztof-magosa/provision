@@ -1,8 +1,0 @@
----
-# File: dotfiles.yml
-
-- hosts: dotfiles
-  roles:
-    - role: dotfiles
-      when: dotfiles_path is defined and dotfiles_repo is defined
-

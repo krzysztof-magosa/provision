@@ -10,5 +10,5 @@
   register: dotfiles_stat
 
 - name: Install dotfiles
-  shell: "{{ dotfiles_path }}/install.sh --force"
-  when: dotfiles.changed == true and dotfiles_stat.stat.exists == true
+  shell: "{{ dotfiles_init_cmd }}"
+  when: dotfiles.changed == true and dotfiles_stat.stat.exists == true and dotfiles_init_cmd is defined

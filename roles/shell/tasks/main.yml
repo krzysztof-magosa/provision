@@ -4,7 +4,8 @@
 - name: Check current shell
   shell: echo $SHELL
   register: current_shell
+  when: shell is defined
 
 - name: Set default shell
   shell: chsh -s {{ shell }}
-  when: current_shell.stdout != "{{ shell }}"
+  when: shell is defined and current_shell.stdout != "{{ shell }}"

@@ -3,6 +3,6 @@
 
 - hosts: shell
   roles:
+    - role: dotfiles
     - role: shell
       when: shell is defined
-
