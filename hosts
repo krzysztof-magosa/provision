@@ -1,22 +1,39 @@
-localhost ansible_connection=local
+home-mbp ansible_connection=local
+work-mbp ansible_connection=local
+
+[common:children]
+home
+work
+
+[home]
+home-mbp
+
+[work]
+work-mbp
 
 [homebrew]
-localhost
+home-mbp
+work-mbp
 
 [software]
-localhost
+home-mbp
+work-mbp
 
 [shell]
-localhost
+home-mbp
+work-mbp
 
 [gui]
-localhost
+home-mbp
+work-mbp
 
 [dev]
-localhost
+home-mbp
+work-mbp
 
 [jekyll]
-localhost
+home-mbp
 
 [vm-host]
-localhost
+home-mbp
+work-mbp
