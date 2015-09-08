@@ -1,0 +1,5 @@
+---
+# File: roles/dev-projects/defaults/main.yml
+
+projects_path: ~/projects
+projects_repos: []

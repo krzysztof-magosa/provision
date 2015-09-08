@@ -1,0 +1,5 @@
+---
+# File: roles/dev-common/tasks/main.yml
+
+- name: Install tig
+  homebrew: pkg=tig state=present

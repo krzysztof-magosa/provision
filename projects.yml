@@ -1,8 +1,0 @@
----
-# File: projects.yml
-
-- hosts: projects
-  roles:
-    - role: projects
-      when: projects_path is defined
-

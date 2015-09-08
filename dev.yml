@@ -1,0 +1,9 @@
+---
+# File: dev.yml
+
+- hosts: dev
+  roles:
+    - dev-common
+    - dev-php
+    - dev-projects
+
