@@ -3,3 +3,6 @@
 - include: shell.yml
 - include: dev.yml
 - include: software.yml
+- include: gui.yml
+- include: jekyll.yml
+- include: vm-host.yml
