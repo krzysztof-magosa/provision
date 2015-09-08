@@ -1,0 +1,6 @@
+---
+# File: vm-host.yml
+
+- hosts: vm-host
+  roles:
+    - vm-host

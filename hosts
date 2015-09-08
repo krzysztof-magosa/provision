@@ -17,3 +17,6 @@ localhost
 
 [jekyll]
 localhost
+
+[vm-host]
+localhost

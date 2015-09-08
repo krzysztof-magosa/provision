@@ -24,7 +24,6 @@ casks:
   - slack
   - spotify
   - tunnelblick
-  - virtualbox
   - emacs
 
 projects_path: ~/projects
