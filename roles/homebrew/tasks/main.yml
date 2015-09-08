@@ -20,5 +20,5 @@
 
 - name: Install apps with brew-cask
   shell: brew cask install --appdir={{ applications_path | quote }} {{ item }}
-  with_items: applications
+  with_items: casks
   when: "item not in installed_applications.stdout.splitlines()"

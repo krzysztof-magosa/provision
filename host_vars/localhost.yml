@@ -16,8 +16,7 @@ brews:
   - tree
   - wget
 
-applications_path: /Applications
-applications:
+casks:
   - google-chrome
   - iterm2
   - vlc
