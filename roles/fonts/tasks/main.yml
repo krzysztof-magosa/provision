@@ -1,0 +1,6 @@
+---
+# File: roles/fonts/tasks/main.yml
+
+- name: Install fonts
+  get_url: url={{ item }} dest={{ fonts_path }} force=no
+  with_items: fonts
