@@ -1,0 +1,8 @@
+---
+# File: roles/jekyll/tasks/main.yml
+
+- name: Install jekyll
+  gem: name=jekyll
+
+- name: Install glynn
+  gem: name=glynn
