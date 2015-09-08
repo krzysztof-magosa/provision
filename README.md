@@ -5,5 +5,5 @@ If you are also using OS X you can use them as base for your configuration.
 
 ```shell
 $ ./bootstrap.sh
-$ ansible-playbook -i hosts site.yml
+$ ansible-playbook site.yml
 ```
