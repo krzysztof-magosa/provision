@@ -9,5 +9,8 @@ localhost
 [shell]
 localhost
 
+[gui]
+localhost
+
 [dev]
 localhost
