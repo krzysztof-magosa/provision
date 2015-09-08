@@ -1,0 +1,6 @@
+---
+# File: software.yml
+
+- hosts: software
+  roles:
+    - software

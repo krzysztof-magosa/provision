@@ -1,0 +1,6 @@
+---
+# File: roles/software/defaults/main.yml
+
+brews: []
+casks: []
+applications_path: /Applications

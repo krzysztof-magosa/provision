@@ -3,6 +3,9 @@ localhost ansible_connection=local
 [homebrew]
 localhost
 
+[software]
+localhost
+
 [shell]
 localhost
 
