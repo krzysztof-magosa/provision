@@ -1,6 +1,9 @@
 ---
 # File: roles/dev-php/tasks/main.yml
 
+- name: Tap PHP repo
+  homebrew_tap: tap=homebrew/php
+
 - name: Install PHP
   homebrew: pkg={{ item }} state=present
   with_items:
