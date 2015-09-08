@@ -2,6 +2,4 @@
 # File: roles/fonts/defaults/main.yml
 
 fonts_path: ~/Library/Fonts
-fonts:
-  - https://github.com/powerline/fonts/blob/master/SourceCodePro/Sauce%20Code%20Powerline%20Light.otf
-  - https://github.com/powerline/fonts/blob/master/SourceCodePro/Sauce%20Code%20Powerline%20Regular.otf
+fonts: []

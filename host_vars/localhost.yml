@@ -2,6 +2,10 @@ dotfiles_repo: git@github.com:krzysztof-magosa/dotfiles.git
 dotfiles_path: ~/.dotfiles
 dotfiles_init_cmd: ~/.dotfiles/install.sh --force
 
+fonts:
+  - https://github.com/powerline/fonts/blob/master/SourceCodePro/Sauce%20Code%20Powerline%20Light.otf
+  - https://github.com/powerline/fonts/blob/master/SourceCodePro/Sauce%20Code%20Powerline%20Regular.otf
+
 brews:
   - coreutils
   - emacs
