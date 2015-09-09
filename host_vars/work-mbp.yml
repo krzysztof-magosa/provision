@@ -1,0 +1,11 @@
+projects_repos:
+  - name: saffron-php
+    category: php
+    repo: git@github.com:krzysztof-magosa/saffron-php.git
+  - name: repository
+    category: php
+    repo: git@github.com:krzysztof-magosa/repository.git
+  - name: metaphore
+    category: php
+    repo: git@github.com:krzysztof-magosa/metaphore.git
+
