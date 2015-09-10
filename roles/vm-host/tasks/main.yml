@@ -6,3 +6,12 @@
 
 - name: Install Vagrant
   homebrew_cask: name=vagrant
+  register: vagrant
+
+- name: Install DotVm plugin
+  shell: vagrant plugin install vagrant-dotvm
+  when: vagrant.changed == true
+
+- name: Install Group plugin
+  shell: vagrant plugin install vagrant-group
+  when: vagrant.changed == true
