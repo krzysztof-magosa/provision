@@ -22,3 +22,8 @@
   with_nested:
     - ruby_gems
     - ruby_versions
+
+- name: Set default ruby version
+  shell: rbenv global 2.2.3
+  args:
+    creates: ~/.rbenv/version
