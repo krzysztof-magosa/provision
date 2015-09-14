@@ -1,0 +1,9 @@
+---
+# File: roles/dev-ruby/tasks/main.yml
+
+- name: Install ruby gems
+  gem: name={{ item }}
+  tags:
+    - ruby
+  with_items:
+    - bundler
