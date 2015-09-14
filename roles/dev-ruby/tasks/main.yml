@@ -24,6 +24,6 @@
     - ruby_versions
 
 - name: Set default ruby version
-  shell: rbenv global 2.2.3
+  shell: rbenv global {{ ruby_default }}
   args:
     creates: ~/.rbenv/version

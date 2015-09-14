@@ -1,6 +1,7 @@
 ---
 # File: roles/dev-ruby/defaults/main.yml
 
+ruby_default: 2.2.3
 ruby_versions:
   - 1.9.3-p551
   - 2.0.0-p647
