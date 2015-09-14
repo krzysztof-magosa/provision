@@ -1,9 +1,26 @@
 ---
 # File: roles/dev-ruby/tasks/main.yml
 
+- name: Install rbenv stuff
+  homebrew: name={{ item }}
+  with_items:
+    - rbenv
+    - ruby-build
+
+- name: Install ruby versions
+  shell: rbenv install {{ item }}
+  args:
+    creates: ~/.rbenv/versions/{{ item }}
+  with_items:
+    - 1.9.3-p551
+    - 2.0.0-p647
+    - 2.1.7
+    - 2.2.3
+
 - name: Install ruby gems
   gem: name={{ item }}
   tags:
     - ruby
   with_items:
     - bundler
+    - rake
