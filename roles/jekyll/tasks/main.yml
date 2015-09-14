@@ -2,7 +2,8 @@
 # File: roles/jekyll/tasks/main.yml
 
 - name: Install jekyll
-  gem: name=jekyll
+  gem: name=jekyll executable=~/.rbenv/shims/gem
 
 - name: Install glynn
-  gem: name=glynn
+  gem: name=glynn executable=~/.rbenv/shims/gem
+
