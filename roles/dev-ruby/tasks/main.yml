@@ -11,16 +11,14 @@
   shell: rbenv install {{ item }}
   args:
     creates: ~/.rbenv/versions/{{ item }}
-  with_items:
-    - 1.9.3-p551
-    - 2.0.0-p647
-    - 2.1.7
-    - 2.2.3
+  with_items: ruby_versions
 
 - name: Install ruby gems
-  gem: name={{ item }}
+  gem: name="{{ item[0] }}" executable=~/.rbenv/shims/gem
+  environment:
+    RBENV_VERSION: "{{ item[1] }}"
   tags:
     - ruby
-  with_items:
-    - bundler
-    - rake
+  with_nested:
+    - ruby_gems
+    - ruby_versions
