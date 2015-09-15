@@ -6,3 +6,6 @@
 
 - name: Configure iTerm2
   copy: src=../templates/com.googlecode.iterm2.plist dest=~/Library/Preferences/com.googlecode.iterm2.plist
+
+- name: Reload iTerm2 preferences cache
+  shell: defaults read com.googlecode.iterm2.plist
