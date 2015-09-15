@@ -1,0 +1,8 @@
+---
+# File: roles/iterm/tasks/main.yml
+
+- name: Install iTerm2
+  homebrew_cask: name=iterm2
+
+- name: Configure iTerm2
+  copy: src=../templates/com.googlecode.iterm2.plist dest=~/Library/Preferences/com.googlecode.iterm2.plist

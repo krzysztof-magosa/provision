@@ -18,7 +18,6 @@ brews:
 
 casks:
   - google-chrome
-  - iterm2
   - vlc
   - keepassx
   - lastpass

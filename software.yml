@@ -3,4 +3,5 @@
 
 - hosts: software
   roles:
+    - iterm
     - software
