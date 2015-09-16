@@ -1,0 +1,5 @@
+---
+# roles/dev-ruby/handlers/main.yml
+
+- name: rehash rbenv
+  shell: rbenv rehash
