@@ -14,7 +14,7 @@
   with_items: ruby_versions
 
 - name: Install ruby gems
-  gem: name="{{ item[0] }}" executable=~/.rbenv/shims/gem
+  gem: name="{{ item[0] }}" executable=~/.rbenv/shims/gem user_install=no
   environment:
     RBENV_VERSION: "{{ item[1] }}"
   tags:
