@@ -2,5 +2,5 @@
 # File: roles/fonts/tasks/main.yml
 
 - name: Install fonts
-  get_url: url={{ item }} dest={{ fonts_path }} force=no
+  get_url: url={{ item['url'] }} dest="{{ fonts_path }}/{{ item['file'] }}" force=no
   with_items: fonts

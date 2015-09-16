@@ -5,8 +5,20 @@ dotfiles_path: ~/.dotfiles
 dotfiles_init_cmd: ~/.dotfiles/install.sh --force
 
 fonts:
-  - https://github.com/powerline/fonts/blob/master/SourceCodePro/Sauce%20Code%20Powerline%20Light.otf
-  - https://github.com/powerline/fonts/blob/master/SourceCodePro/Sauce%20Code%20Powerline%20Regular.otf
+  - url: https://github.com/powerline/fonts/raw/master/SourceCodePro/Sauce%20Code%20Powerline%20Black.otf
+    file: "Sauce Code Powerline Black.otf"
+  - url: https://github.com/powerline/fonts/raw/master/SourceCodePro/Sauce%20Code%20Powerline%20Bold.otf
+    file: "Sauce Code Powerline Bold.otf"
+  - url: https://github.com/powerline/fonts/raw/master/SourceCodePro/Sauce%20Code%20Powerline%20ExtraLight.otf
+    file: "Sauce Code Powerline ExtraLight.otf"
+  - url: https://github.com/powerline/fonts/raw/master/SourceCodePro/Sauce%20Code%20Powerline%20Light.otf
+    file: "Sauce Code Powerline Light.otf"
+  - url: https://github.com/powerline/fonts/raw/master/SourceCodePro/Sauce%20Code%20Powerline%20Medium.otf
+    file: "Sauce Code Powerline Medium.otf"
+  - url: https://github.com/powerline/fonts/raw/master/SourceCodePro/Sauce%20Code%20Powerline%20Regular.otf
+    file: "Sauce Code Powerline Regular.otf"
+  - url: https://github.com/powerline/fonts/raw/master/SourceCodePro/Sauce%20Code%20Powerline%20Semibold.otf
+    file: "Sauce Code Powerline Semibold.otf"
 
 brews:
   - coreutils
