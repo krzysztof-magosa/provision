@@ -9,6 +9,7 @@
   when: ansible_os_family == "Darwin"
 
 - name: Install dev utils | CentOS
+  become: yes
   yum: pkg={{ item }} state=present
   with_items:
 #    - tig
