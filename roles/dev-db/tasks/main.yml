@@ -3,3 +3,4 @@
 
 - name: Install Sequel Pro
   homebrew_cask: name=sequel-pro
+  when: ansible_os_family == "Darwin"

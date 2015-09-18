@@ -3,8 +3,16 @@
 
 - name: Tap PHP repo
   homebrew_tap: tap=homebrew/php
+  when: ansible_os_family == "Darwin"
 
-- name: Install PHP
+- name: Install PHP | OS X
   homebrew: pkg={{ item }} state=present
   with_items:
     - php56
+  when: ansible_os_family == "Darwin"
+
+- name: Install PHP | CentOS
+  yum: pkg={{ item }} state=present
+  with_items:
+    - php-cli
+  when: ansible_distribution == "CentOS"

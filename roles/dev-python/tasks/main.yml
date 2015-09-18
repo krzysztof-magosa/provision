@@ -8,3 +8,6 @@
     - pyenv-virtualenv
     - python
     - python3
+  when: ansible_os_family == "Darwin"
+
+# @TODO: CentOS

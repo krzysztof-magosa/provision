@@ -4,3 +4,4 @@
 - name: Install fonts
   get_url: url={{ item['url'] }} dest="{{ fonts_path }}/{{ item['file'] }}" force=no
   with_items: fonts
+  when: ansible_os_family == "Darwin"

@@ -6,12 +6,14 @@
   with_items:
     - rbenv
     - ruby-build
+  when: ansible_os_family == "Darwin"
 
 - name: Install ruby versions
   shell: rbenv install {{ item }}
   args:
     creates: ~/.rbenv/versions/{{ item }}
   with_items: ruby_versions
+  when: ansible_os_family == "Darwin"
 
 - name: Install ruby gems
   gem: name="{{ item[0] }}" executable=~/.rbenv/shims/gem user_install=no
@@ -23,8 +25,13 @@
   with_nested:
     - ruby_gems
     - ruby_versions
+  when: ansible_os_family == "Darwin"
 
 - name: Set default ruby version
   shell: rbenv global {{ ruby_default }}
   args:
     creates: ~/.rbenv/version
+  when: ansible_os_family == "Darwin"
+
+# @TODO: CentOS
+

@@ -3,9 +3,12 @@
 
 - name: Install iTerm2
   homebrew_cask: name=iterm2
+  when: ansible_os_family == "Darwin"
 
 - name: Configure iTerm2
   copy: src=../templates/com.googlecode.iterm2.plist dest=~/Library/Preferences/com.googlecode.iterm2.plist
+  when: ansible_os_family == "Darwin"
 
 - name: Reload iTerm2 preferences cache
   shell: defaults read com.googlecode.iterm2.plist
+  when: ansible_os_family == "Darwin"
