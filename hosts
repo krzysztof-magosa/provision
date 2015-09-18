@@ -1,5 +1,7 @@
 home-mbp ansible_connection=local
 work-mbp ansible_connection=local
+home-playground ansible_ssh_host=192.168.56.150 ansible_ssh_user=vagrant
+work-playground ansible_ssh_host=192.168.56.150 ansible_ssh_user=vagrant
 
 [common:children]
 home
@@ -7,9 +9,11 @@ work
 
 [home]
 home-mbp
+home-playground
 
 [work]
 work-mbp
+work-playground
 
 [homebrew]
 home-mbp
@@ -18,10 +22,14 @@ work-mbp
 [software]
 home-mbp
 work-mbp
+home-playground
+work-playground
 
 [shell]
 home-mbp
 work-mbp
+home-playground
+work-playground
 
 [gui]
 home-mbp
@@ -30,6 +38,8 @@ work-mbp
 [dev]
 home-mbp
 work-mbp
+home-playground
+work-playground
 
 [jekyll]
 home-mbp
