@@ -17,5 +17,6 @@
   when: ansible_os_family == "Darwin"
 
 - name: Install git | CentOS
+  become: yes
   yum: name=git state=latest
   when: ansible_distribution == "CentOS"
