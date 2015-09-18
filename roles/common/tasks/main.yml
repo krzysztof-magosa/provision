@@ -1,10 +1,12 @@
 ---
-# File: roles/homebrew/tasks/main.yml
+# File: roles/common/tasks/main.yml
 
 - name: Install homebrew
   shell: ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
   args:
     creates: /usr/local/bin/brew
+  when: ansible_os_family == "Darwin"
 
 - name: Install brew-cask
   homebrew: name=caskroom/cask/brew-cask state=present
+  when: ansible_os_family == "Darwin"

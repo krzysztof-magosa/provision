@@ -1,5 +1,5 @@
 ---
-- include: homebrew.yml
+- include: common.yml
 - include: shell.yml
 - include: dev.yml
 - include: software.yml
