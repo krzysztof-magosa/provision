@@ -15,3 +15,21 @@
 - name: Install Group plugin
   shell: vagrant plugin install vagrant-group
   when: vagrant.changed == true
+
+- name: Prepare directories for DotVm configuration
+  file: path={{ item }} state=directory
+  with_items:
+    - ~/.dotvm
+    - ~/.dotvm/projects
+    - ~/.dotvm/options
+    - ~/.dotvm/variables
+
+- name: Configure DotVm
+  template: >
+    src=Vagrantfile.j2
+    dest=~/.dotvm/Vagrantfile
+
+- name: Fetch playground dotvm configuration
+  git: >
+    repo=git@github.com:krzysztof-magosa/playground.git
+    dest=~/.dotvm/projects/playground
