@@ -1,5 +1,7 @@
 #! /bin/bash
 
+export PATH="$PATH:/opt/ansible/bin"
+
 [ -d /opt/ansible ] && exit 0
 
 xcode-select -p >/dev/null 2>&1
