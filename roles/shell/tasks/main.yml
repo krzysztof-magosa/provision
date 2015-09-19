@@ -1,12 +1,17 @@
 ---
 # File: roles/shell/tasks/main.yml
 
-- name: Check current shell
-  shell: echo $SHELL
-  register: current_shell
-  when: shell is defined and ansible_os_family == "Darwin"
+- name: Install zsh
+  become: yes
+  yum: name=zsh
+  when: ansible_distribution == "CentOS"
 
-- name: Set default shell
-  shell: chsh -s {{ shell }}
-  when: shell is defined and current_shell.stdout != "{{ shell }}" and ansible_os_family == "Darwin"
+- name: Set shell to zsh | OS X
+  become: yes
+  user: name={{ ansible_env.USER }} shell=/bin/zsh
+  when: ansible_os_family == "Darwin"
 
+- name: Set shell to zsh | CentOS
+  become: yes
+  user: name={{ ansible_ssh_user}} shell=/bin/zsh
+  when: ansible_distribution == "CentOS"
