@@ -8,7 +8,7 @@
 
 - name: Set shell to zsh | OS X
   become: yes
-  user: name={{ ansible_env.USER }} shell=/bin/zsh
+  shell: chsh -s /bin/zsh {{ ansible_env.USER }}
   when: ansible_os_family == "Darwin"
 
 - name: Set shell to zsh | CentOS
