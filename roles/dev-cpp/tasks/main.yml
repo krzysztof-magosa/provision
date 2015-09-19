@@ -1,0 +1,7 @@
+---
+# File: roles/dev-cpp/tasks/main.yml
+
+- name: Install compiler stuff
+  become: yes
+  yum: name=gcc-c++
+  when: ansible_distribution == "CentOS"

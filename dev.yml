@@ -4,6 +4,7 @@
 - hosts: dev
   roles:
     - dev-common
+    - dev-cpp
     - dev-php
     - dev-python
     - dev-ruby
