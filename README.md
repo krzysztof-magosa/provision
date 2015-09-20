@@ -1,9 +1,30 @@
-# Provision for my laptop
+# Provision
 
-This repo contains Ansible playbook provisioning my MacBook.
-If you are also using OS X you can use them as base for your configuration.
-
+## Initialization of Ansible
 ```shell
 $ ./bootstrap.sh
-$ ansible-playbook site.yml
+```
+
+## Provisioning of home machines
+```shell
+# Provision home laptop
+$ ansible-playbook site.yml --limit home-mbp
+
+# Provision home playground
+$ ansible-playbook site.yml --limit home-playground
+
+# Provision home machines - laptop and playground
+$ ansible-playbook site.yml --limit home
+```
+
+## Provisioning of work machines
+```shell
+# Provision work laptop
+$ ansible-playbook site.yml --limit work-mbp
+
+# Provision work playground
+$ ansible-playbook site.yml --limit work-playground
+
+# Provision work machines - laptop and playground
+$ ansible-playbook site.yml --limit work
 ```
