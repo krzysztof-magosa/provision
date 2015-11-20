@@ -12,3 +12,4 @@ ruby_gems:
   - bundler
   - rake
   - rubocop
+  - rspec
