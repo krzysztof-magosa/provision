@@ -1,0 +1,17 @@
+---
+# File: roles/shell/tasks/zsh.yml
+
+- name: Install zsh
+  become: yes
+  yum: name=zsh
+  when: ansible_distribution == "CentOS"
+
+- name: Set shell to zsh | OS X
+  become: yes
+  shell: chsh -s /bin/zsh {{ ansible_env.USER }}
+  when: ansible_os_family == "Darwin"
+
+- name: Set shell to zsh | CentOS
+  become: yes
+  user: name={{ ansible_ssh_user}} shell=/bin/zsh
+  when: ansible_distribution == "CentOS"
