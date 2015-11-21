@@ -2,4 +2,11 @@
 # File: roles/projects/defaults/main.yml
 
 projects_path: ~/projects
-projects_repos: []
+projects_categories:
+  - cpp
+  - php
+  - java
+  - ruby
+  - python
+  - ansible
+  - emacs

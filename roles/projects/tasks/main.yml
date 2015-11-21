@@ -5,9 +5,6 @@
   file: path={{ projects_path }} state=directory
 
 - name: Create projects categories
-  file: path={{ projects_path }}/{{ item['category'] }} state=directory
-  with_items: projects_repos
+  file: path={{ projects_path }}/{{ item }} state=directory
+  with_items: projects_categories
 
-- name: Clone repositories
-  git: repo={{ item['repo'] }} dest={{ projects_path }}/{{ item['category'] }}/{{ item['name'] }} recursive=true update=no
-  with_items: projects_repos
