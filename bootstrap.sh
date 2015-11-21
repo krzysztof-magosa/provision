@@ -1,19 +1,15 @@
 #! /bin/bash
 
-export PATH="$PATH:/opt/ansible/bin"
-
-[ -d /opt/ansible ] && exit 0
+export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 
 xcode-select -p >/dev/null 2>&1
 if [ $? -eq 0 ]; then
     xcode-select --install
 fi
 
-sudo easy_install pip
-sudo pip install pyyaml
-sudo pip install jinja2
-sudo pip install six
+easy_install --user pip
 
-sudo mkdir -p /opt/ansible
-sudo git clone https://github.com/ansible/ansible.git /opt/ansible --recursive
-sudo bash /opt/ansible/hacking/env-setup
+pip install --user paramiko PyYAML Jinja2 httplib2 six ansible
+
+# install needed external roles
+ansible-galaxy install -r requirements.yml
