@@ -25,8 +25,6 @@
   args:
     creates: ~/.rbenv/versions/{{ item }}
   with_items: ruby_versions
-  environment:
-    PATH: ~/.rbenv/bin:~/.rbenv/plugins/ruby-build/bin:{{ ansible_env.PATH }}
 
 - name: Install ruby gems
   gem: name="{{ item[0] }}" executable=~/.rbenv/shims/gem user_install=no
