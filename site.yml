@@ -5,7 +5,6 @@
   roles:
     - jgkim.brew
     - common
-    - dotfiles
     - shell
     - dev-common
     - dev-cpp

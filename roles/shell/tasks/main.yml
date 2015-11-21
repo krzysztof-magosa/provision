@@ -3,3 +3,4 @@
 
 - include: zsh.yml
 - include: tools.yml
+- include: dotfiles.yml
