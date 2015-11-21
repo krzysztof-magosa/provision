@@ -15,5 +15,5 @@
 
 - name: Clone emacs.d
   git: >
-    repo=git@github.com:krzysztof-magosa/emacs.d.git
-    dest=~/.emacs.d
+    repo="{{ emacsd_repo }}"
+    dest="{{ emacsd_path }}"

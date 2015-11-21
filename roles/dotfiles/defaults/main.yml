@@ -3,3 +3,4 @@
 
 # dotfiles_repo:
 dotfiles_path: ~/.dotfiles
+emacsd_path: ~/.emacs.d
