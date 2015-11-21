@@ -1,6 +1,0 @@
----
-# File: jekyll.yml
-
-- hosts: jekyll
-  roles:
-    - jekyll

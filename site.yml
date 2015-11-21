@@ -1,8 +1,22 @@
 ---
-- include: common.yml
-- include: shell.yml
-- include: dev.yml
-- include: software.yml
-- include: gui.yml
-- include: jekyll.yml
-- include: vm-host.yml
+- hosts: all
+  environment:
+    PATH: "{{ ansible_env.PATH }}:/opt/homebrew/bin:{{ ansible_env.HOME }}/.rbenv/bin:{{ ansible_env.HOME }}/.rbenv/plugins/ruby-build/bin"
+  roles:
+    - jgkim.brew
+    - common
+    - dotfiles
+    - shell
+    - dev-common
+    - dev-cpp
+    - dev-php
+    - dev-python
+    - dev-ruby
+    - dev-lisp
+    - dev-db
+    - dev-projects
+    - software
+    - fonts
+    - jekyll
+    - vm-host
+

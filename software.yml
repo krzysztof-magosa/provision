@@ -1,7 +1,0 @@
----
-# File: software.yml
-
-- hosts: software
-  roles:
-    - iterm
-    - software

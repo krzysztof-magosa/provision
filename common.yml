@@ -1,6 +1,0 @@
----
-# File: homebrew.yml
-- hosts: common
-  roles:
-    - common
-    - jgkim.brew
