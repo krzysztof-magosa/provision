@@ -12,3 +12,8 @@
 - name: Install dotfiles
   shell: "{{ dotfiles_init_cmd }}"
   when: dotfiles.changed == true and dotfiles_stat.stat.exists == true and dotfiles_init_cmd is defined
+
+- name: Clone emacs.d
+  git: >
+    repo=git@github.com:krzysztof-magosa/emacs.d.git
+    dest=~/.emacs.d
