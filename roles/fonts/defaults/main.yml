@@ -1,5 +1,0 @@
----
-# File: roles/fonts/defaults/main.yml
-
-fonts_path: ~/Library/Fonts
-fonts: []
