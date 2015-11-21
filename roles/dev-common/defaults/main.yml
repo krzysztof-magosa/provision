@@ -1,5 +1,5 @@
 ---
-# File: roles/dev-projects/defaults/main.yml
+# File: roles/dev-common/defaults/main.yml
 
 projects_path: ~/projects
 projects_categories:

@@ -1,5 +1,5 @@
 ---
-# File: roles/dev-projects/tasks/main.yml
+# File: roles/dev-common/tasks/structure.yml
 
 - name: Create projects directory
   file: path={{ projects_path }} state=directory
@@ -7,4 +7,3 @@
 - name: Create projects categories
   file: path={{ projects_path }}/{{ item }} state=directory
   with_items: projects_categories
-

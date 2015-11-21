@@ -1,0 +1,17 @@
+---
+# File: roles/dev-common/tasks/software.yml
+
+- name: Install dev utils | OS X
+  homebrew: pkg={{ item }} state=present
+  with_items:
+    - tig
+    - git
+  when: ansible_os_family == "Darwin"
+
+- name: Install dev utils | CentOS
+  become: yes
+  yum: pkg={{ item }} state=present
+  with_items:
+#    - tig
+    - git
+  when: ansible_distribution == "CentOS"
