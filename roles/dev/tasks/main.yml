@@ -1,0 +1,9 @@
+---
+# File: roles/dev/tasks/main.yml
+
+- include: cpp.yml
+- include: db.yml
+- include: lisp.yml
+- include: php.yml
+- include: python.yml
+- include: ruby.yml

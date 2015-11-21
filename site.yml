@@ -7,12 +7,7 @@
     - common
     - shell
     - dev-common
-    - dev-cpp
-    - dev-php
-    - dev-python
-    - dev-ruby
-    - dev-lisp
-    - dev-db
+    - dev
     - software
     - fonts
     - jekyll
