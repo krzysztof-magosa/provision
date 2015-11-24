@@ -1,5 +1,0 @@
----
-# File: roles/dev-common/tasks/main.yml
-
-- include: software.yml
-- include: structure.yml

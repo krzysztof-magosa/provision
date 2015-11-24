@@ -1,6 +1,8 @@
 ---
 # File: roles/dev/tasks/main.yml
 
+- include: structure.yml
+
 - include: cpp.yml
 - include: db.yml
 - include: lisp.yml

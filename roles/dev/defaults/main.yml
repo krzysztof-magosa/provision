@@ -13,3 +13,13 @@ ruby_gems:
   - rake
   - rubocop
   - rspec
+
+projects_path: ~/projects
+projects_categories:
+  - cpp
+  - php
+  - java
+  - ruby
+  - python
+  - ansible
+  - emacs
