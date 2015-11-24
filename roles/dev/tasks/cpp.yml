@@ -22,3 +22,9 @@
     - bison
     - sqlite-devel
   when: ansible_distribution == "CentOS"
+
+- name: Install c/cpp stuff
+  homebrew: name={{ item }}
+  with_items:
+    - cmake
+  when: ansible_os_family == "Darwin"
