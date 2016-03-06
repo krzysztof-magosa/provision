@@ -19,11 +19,8 @@ casks:
   - google-chrome
   - vlc
   - keepassx
-  - lastpass
   - skype
   - slack
   - spotify
-  - tunnelblick
-  - emacs
   - iterm2
 
