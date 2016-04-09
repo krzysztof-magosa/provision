@@ -3,3 +3,5 @@
 
 - include: osx.yml
   when: ansible_os_family == "Darwin"
+  tags:
+    - software

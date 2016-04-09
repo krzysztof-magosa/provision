@@ -2,5 +2,17 @@
 # File: roles/shell/tasks/main.yml
 
 - include: zsh.yml
+  tags:
+    - shell
+    - shell_zsh
+
 - include: tools.yml
+  tags:
+    - shell
+    - shell_tools
+
 - include: dotfiles.yml
+  tags:
+    - shell
+    - shell_dotfiles
+

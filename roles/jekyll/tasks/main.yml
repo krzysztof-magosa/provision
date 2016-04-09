@@ -3,7 +3,9 @@
 
 - name: Install jekyll
   gem: name=jekyll executable=~/.rbenv/shims/gem
+  tags: jekyll
 
 - name: Install glynn
   gem: name=glynn executable=~/.rbenv/shims/gem
+  tags: jekyll
 

@@ -2,10 +2,36 @@
 # File: roles/dev/tasks/main.yml
 
 - include: structure.yml
+  tags:
+    - dev
+    - dev_structure
 
 - include: cpp.yml
+  tags:
+    - dev
+    - dev_cpp
+
 - include: db.yml
+  tags:
+    - dev
+    - dev_db
+
 - include: lisp.yml
+  tags:
+    - dev
+    - dev_lisp
+
 - include: php.yml
+  tags:
+    - dev
+    - dev_php
+
 - include: python.yml
+  tags:
+    - dev
+    - dev_python
+
 - include: ruby.yml
+  tags:
+    - dev
+    - dev_ruby

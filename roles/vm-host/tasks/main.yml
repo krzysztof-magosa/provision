@@ -3,18 +3,22 @@
 
 - name: Install VirtualBox
   homebrew_cask: name=virtualbox
+  tags: vm-host
 
 - name: Install Vagrant
   homebrew_cask: name=vagrant
   register: vagrant
+  tags: vm-host
 
 - name: Install DotVm plugin
   shell: vagrant plugin install vagrant-dotvm
   when: vagrant.changed == true
+  tags: vm-host
 
 - name: Install Group plugin
   shell: vagrant plugin install vagrant-group
   when: vagrant.changed == true
+  tags: vm-host
 
 - name: Prepare directories for DotVm configuration
   file: path={{ item }} state=directory
@@ -23,13 +27,16 @@
     - ~/.dotvm/projects
     - ~/.dotvm/options
     - ~/.dotvm/variables
+  tags: vm-host
 
 - name: Configure DotVm
   template: >
     src=Vagrantfile.j2
     dest=~/.dotvm/Vagrantfile
+  tags: vm-host
 
 - name: Fetch playground dotvm configuration
   git: >
     repo=git@github.com:krzysztof-magosa/playground.git
     dest=~/.dotvm/projects/playground
+  tags: vm-host
