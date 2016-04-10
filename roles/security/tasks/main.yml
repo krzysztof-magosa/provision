@@ -1,0 +1,12 @@
+---
+# File: roles/security/tasks/main.yml
+
+- include: hosts.yml
+  tags:
+    - security
+    - security_hosts
+
+- include: osx.yml
+  tags:
+    - security
+    - security_osx

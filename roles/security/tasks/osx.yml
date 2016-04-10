@@ -1,0 +1,14 @@
+- name: Require password to unlock screen
+  command: defaults write com.apple.screensaver askForPassword 1
+
+- name: Require password immediately after locking
+  command: defaults write com.apple.screensaver askForPasswordDelay 0
+
+- name: Show all extensions
+  command: defaults write -g AppleShowAllExtensions -bool true
+
+- name: Dont send stuff from Spotlight to Apple
+  command: defaults write com.apple.lookup lookupEnabled -dict-add suggestionsEnabled -int 0
+
+- name: Reload applications to make settings live
+  command: killall Dock Finder
