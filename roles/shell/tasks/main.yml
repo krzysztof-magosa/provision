@@ -16,3 +16,8 @@
     - shell
     - shell_dotfiles
 
+# it must be done after dotfiles
+- include: fish.yml
+  tags:
+    - shell
+    - shell_fish

@@ -15,6 +15,7 @@ brews:
   - tree
   - wget
   - tig
+  - fish
 
 casks:
   - google-chrome
