@@ -16,6 +16,7 @@ brews:
   - wget
   - tig
   - fish
+  - htop
 
 casks:
   - google-chrome
