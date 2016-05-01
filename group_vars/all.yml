@@ -17,6 +17,12 @@ brews:
   - tig
   - fish
   - htop
+  - terminal-notifier
+  - autoenv
+  - resty
+  - jq
+  - fzf
+  - watson
 
 casks:
   - google-chrome
