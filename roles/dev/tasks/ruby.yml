@@ -31,8 +31,6 @@
   notify: rehash rbenv
   environment:
     RBENV_VERSION: "{{ item[1] }}"
-  tags:
-    - ruby
   with_nested:
     - ruby_gems
     - ruby_versions
