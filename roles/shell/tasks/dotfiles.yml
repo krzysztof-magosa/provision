@@ -5,13 +5,9 @@
   git: "repo={{ dotfiles_repo }} dest={{ dotfiles_path }} recursive=true accept_hostkey=yes"
   register: dotfiles
 
-- name: Check if dotfiles contains install.sh
-  stat: path="{{ dotfiles_path }}/install.sh"
-  register: dotfiles_stat
-
 - name: Install dotfiles
   shell: "{{ dotfiles_init_cmd }}"
-  when: dotfiles.changed == true and dotfiles_stat.stat.exists == true and dotfiles_init_cmd is defined
+  when: dotfiles | changed and dotfiles_init_cmd is defined
 
 - name: Clone emacs.d
   git: >
