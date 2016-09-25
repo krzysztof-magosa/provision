@@ -1,0 +1,16 @@
+- name: Create directory for config
+  file:
+    path: ~/Library/Application Support/keepassx
+    state: directory
+
+- name: Show General settings
+  ini_file:
+    dest: ~/Library/Application Support/keepassx/keepassx2.ini
+    section: General
+    option: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_dict:
+    ShowToolbar: 'true'
+    LastDir: "{{ keepassx_db | dirname | expanduser }}"
+    LastDatabases: "{{ keepassx_db | expanduser }}"
+    LastOpenedDatabases: "{{ keepassx_db | expanduser }}"

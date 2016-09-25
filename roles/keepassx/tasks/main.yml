@@ -1,0 +1,9 @@
+- include: install.yml
+  tags:
+    - keepassx
+    - keepassx_install
+
+- include: config.yml
+  tags:
+    - keepassx
+    - keepassx_config
