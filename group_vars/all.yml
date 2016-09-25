@@ -23,6 +23,7 @@ brews:
   - jq
   - fzf
   - watson
+  - global
 
 casks:
   - google-chrome
