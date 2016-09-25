@@ -1,5 +1,5 @@
 ---
-# File: roles/vm-host/tasks/main.yml
+# File: roles/vm_host/tasks/main.yml
 
 - include: install.yml
   tags:
