@@ -1,5 +1,9 @@
 ---
 - hosts: all
+  roles: []
+
+- hosts: all
+  gather_facts: no
   environment:
     PATH: "{{ ansible_env.PATH }}:/opt/homebrew/bin:{{ ansible_env.HOME }}/.rbenv/bin:{{ ansible_env.HOME }}/.rbenv/plugins/ruby-build/bin"
   roles:
