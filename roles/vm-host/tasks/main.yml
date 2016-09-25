@@ -10,29 +10,27 @@
   register: vagrant
   tags: vm-host
 
+- name: Check installed plugins
+  shell: vagrant plugin list | awk '{print $1}'
+  register: dotvm_installed
+  tags: vm-host
+
 - name: Install DotVm plugin
   shell: vagrant plugin install vagrant-dotvm
-  when: vagrant.changed == true
+  when: not "vagrant-dotvm" in dotvm_installed.stdout
   tags: vm-host
 
-- name: Install Group plugin
-  shell: vagrant plugin install vagrant-group
-  when: vagrant.changed == true
+- name: Create directory for DotVM configuration
+  file:
+    path: ~/.dotvm
+    state: directory
   tags: vm-host
 
-- name: Prepare directories for DotVm configuration
-  file: path={{ item }} state=directory
-  with_items:
-    - ~/.dotvm
-    - ~/.dotvm/projects
-    - ~/.dotvm/options
-    - ~/.dotvm/variables
-  tags: vm-host
-
-- name: Configure DotVm
-  template: >
-    src=Vagrantfile.j2
-    dest=~/.dotvm/Vagrantfile
+- name: Initialize DotVM
+  shell: vagrant dotvm init
+  args:
+    chdir: ~/.dotvm
+    creates: ~/.dotvm/Vagrantfile
   tags: vm-host
 
 - name: Fetch playground dotvm configuration
