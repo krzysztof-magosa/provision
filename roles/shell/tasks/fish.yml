@@ -1,5 +1,0 @@
-- name: Install Fisher
-  git: repo=https://github.com/fisherman/fisherman dest=~/.local/share/fisherman
-
-- name: Install fisher plugins
-  command: fisher update
