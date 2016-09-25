@@ -10,6 +10,6 @@
     creates: ~/.dotvm/Vagrantfile
 
 - name: Fetch playground dotvm configuration
-  git: >
-    repo=git@github.com:krzysztof-magosa/playground.git
-    dest=~/.dotvm/projects/playground
+  git:
+    repo: git@github.com:krzysztof-magosa/playground.git
+    dest: ~/.dotvm/projects/playground
