@@ -1,0 +1,15 @@
+- name: Create directory for DotVM configuration
+  file:
+    path: ~/.dotvm
+    state: directory
+
+- name: Initialize DotVM
+  shell: vagrant dotvm init
+  args:
+    chdir: ~/.dotvm
+    creates: ~/.dotvm/Vagrantfile
+
+- name: Fetch playground dotvm configuration
+  git: >
+    repo=git@github.com:krzysztof-magosa/playground.git
+    dest=~/.dotvm/projects/playground

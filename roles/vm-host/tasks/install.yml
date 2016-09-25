@@ -1,0 +1,14 @@
+- name: Install VirtualBox
+  homebrew_cask: name=virtualbox
+
+- name: Install Vagrant
+  homebrew_cask: name=vagrant
+  register: vagrant
+
+- name: Check installed plugins
+  shell: vagrant plugin list | awk '{print $1}'
+  register: dotvm_installed
+
+- name: Install DotVm plugin
+  shell: vagrant plugin install vagrant-dotvm
+  when: not "vagrant-dotvm" in dotvm_installed.stdout
