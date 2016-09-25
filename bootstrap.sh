@@ -9,7 +9,7 @@ fi
 
 easy_install --user pip
 
-pip install --user paramiko PyYAML Jinja2 httplib2 six ansible==1.9.4
+pip install --user paramiko PyYAML Jinja2 httplib2 six ansible==2.1.1
 
 # install needed external roles
 ansible-galaxy install -r requirements.yml
