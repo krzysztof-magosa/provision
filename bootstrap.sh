@@ -1,6 +1,7 @@
 #! /bin/bash
 
-export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+export PYTHONUSERBASE=~/.python
+export PATH="$PATH:$PYTHONUSERBASE/bin"
 
 xcode-select -p >/dev/null 2>&1
 if [ $? -eq 0 ]; then
