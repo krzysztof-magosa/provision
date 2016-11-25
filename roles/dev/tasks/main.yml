@@ -20,11 +20,6 @@
     - dev
     - dev_lisp
 
-- include: php.yml
-  tags:
-    - dev
-    - dev_php
-
 - include: python.yml
   tags:
     - dev
