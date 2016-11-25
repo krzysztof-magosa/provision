@@ -15,11 +15,6 @@
     - dev
     - dev_db
 
-- include: lisp.yml
-  tags:
-    - dev
-    - dev_lisp
-
 - include: python.yml
   tags:
     - dev

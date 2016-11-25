@@ -1,5 +1,0 @@
----
-
-- name: Install SBCL Common Lisp
-  homebrew: name=sbcl
-  when: ansible_os_family == "Darwin"
