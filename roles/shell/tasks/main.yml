@@ -1,5 +1,4 @@
 ---
-# File: roles/shell/tasks/main.yml
 
 - include: zsh.yml
   tags:

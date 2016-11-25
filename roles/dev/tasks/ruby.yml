@@ -1,5 +1,4 @@
 ---
-# File: roles/dev-ruby/tasks/main.yml
 
 - name: Install rbenv stuff | OS X
   homebrew: name={{ item }}

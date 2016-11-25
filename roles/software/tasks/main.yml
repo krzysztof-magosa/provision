@@ -1,5 +1,4 @@
 ---
-# File: roles/software/tasks/main.yml
 
 - include: osx.yml
   when: ansible_os_family == "Darwin"

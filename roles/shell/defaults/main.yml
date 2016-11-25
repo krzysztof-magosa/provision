@@ -1,5 +1,4 @@
 ---
-# File: roles/shell/defaults/main.yml
 
 # dotfiles_repo:
 dotfiles_path: ~/.dotfiles

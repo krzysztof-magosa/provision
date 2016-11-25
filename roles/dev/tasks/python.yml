@@ -1,5 +1,4 @@
 ---
-# File: roles/dev-python/tasks/main.yml
 
 - name: Install python software
   homebrew: pkg={{ item }} state=installed

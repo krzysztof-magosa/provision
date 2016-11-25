@@ -1,5 +1,4 @@
 ---
-# File: roles/shell/tasks/dotfiles.yml
 
 - name: Clone dotfiles
   git: "repo={{ dotfiles_repo }} dest={{ dotfiles_path }} recursive=true accept_hostkey=yes"

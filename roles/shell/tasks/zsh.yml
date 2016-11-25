@@ -1,5 +1,4 @@
 ---
-# File: roles/shell/tasks/zsh.yml
 
 - name: Install zsh
   become: yes

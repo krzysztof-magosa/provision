@@ -1,5 +1,4 @@
 ---
-# File: roles/dev-common/tasks/structure.yml
 
 - name: Create projects directory
   file: path={{ projects_path }} state=directory

@@ -1,5 +1,4 @@
 ---
-# File: roles/dev/tasks/main.yml
 
 - include: structure.yml
   tags:

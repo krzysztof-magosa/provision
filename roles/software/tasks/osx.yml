@@ -1,5 +1,4 @@
 ---
-# File: roles/software/tasks/osx.yml
 
 - name: Install homebrew packages
   homebrew: name={{ item }} state=present

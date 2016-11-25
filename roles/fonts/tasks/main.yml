@@ -1,5 +1,4 @@
 ---
-# File: roles/fonts/tasks/main.yml
 
 - name: Check if we have powerline fonts already installed
   stat: path="{{ ansible_env.HOME }}/Library/Fonts/Sauce Code Powerline Regular.otf"

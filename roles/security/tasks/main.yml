@@ -1,5 +1,4 @@
 ---
-# File: roles/security/tasks/main.yml
 
 - include: osx.yml
   tags:

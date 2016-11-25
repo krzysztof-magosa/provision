@@ -1,5 +1,4 @@
 ---
-# File: roles/jekyll/tasks/main.yml
 
 - name: Install jekyll
   gem: name=jekyll executable=~/.rbenv/shims/gem

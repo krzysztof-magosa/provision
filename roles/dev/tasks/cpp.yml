@@ -1,5 +1,4 @@
 ---
-# File: roles/dev-cpp/tasks/main.yml
 
 - name: Install c/cpp stuff
   become: yes

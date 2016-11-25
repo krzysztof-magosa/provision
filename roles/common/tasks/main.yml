@@ -1,5 +1,4 @@
 ---
-# File: roles/common/tasks/main.yml
 
 # Git is needed later for ansible module 'git'
 - name: Install git | OS X

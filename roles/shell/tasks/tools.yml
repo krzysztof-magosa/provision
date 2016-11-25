@@ -1,5 +1,4 @@
 ---
-# File: roles/shell/tasks/tools.yml
 
 - name: Install oh my zsh
   git: >

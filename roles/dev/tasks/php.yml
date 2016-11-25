@@ -1,5 +1,4 @@
 ---
-# File: roles/dev-php/tasks/main.yml
 
 - name: Tap PHP repo
   homebrew_tap: tap=homebrew/php
