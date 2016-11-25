@@ -24,8 +24,3 @@
   tags:
     - dev
     - dev_python
-
-- include: ruby.yml
-  tags:
-    - dev
-    - dev_ruby

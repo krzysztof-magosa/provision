@@ -1,5 +1,0 @@
----
-# roles/dev/handlers/main.yml
-
-- name: rehash rbenv
-  shell: rbenv rehash
