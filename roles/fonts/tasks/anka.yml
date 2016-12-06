@@ -1,0 +1,16 @@
+- name: Check if Anka fonts are installed
+  stat:
+    path: "{{ ansible_env.HOME }}/Library/Fonts/AnkaCoder-r.ttf"
+  register: font_stat
+
+- name: Download Anka fonts
+  get_url:
+    url: "https://fontlibrary.org/assets/downloads/anka-coder/da7bb01396b466c92e31073a27028647/anka-coder.zip"
+    dest: /tmp/anka-coder.zip
+  when: not font_stat.stat.exists
+
+- name: Unpack Anka fonts
+  unarchive:
+    src: /tmp/anka-coder.zip
+    dest: "{{ ansible_env.HOME }}/Library/Fonts/"
+  when: not font_stat.stat.exists

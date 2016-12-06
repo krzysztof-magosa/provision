@@ -1,0 +1,33 @@
+---
+
+- name: Check if we have powerline fonts already installed
+  stat: path="{{ ansible_env.HOME }}/Library/Fonts/Sauce Code Powerline Regular.otf"
+  register: fonts_stat
+  when: ansible_os_family == "Darwin"
+  tags: fonts
+
+- name: Download fonts
+  get_url: >
+    url=https://github.com/powerline/fonts/archive/master.zip
+    dest=/tmp/powerline-fonts-master.zip
+  when: ansible_os_family == "Darwin" and fonts_stat.stat.exists == False
+  tags: fonts
+
+- name: Create directory to unpack fonts
+  file: path=/tmp/powerline-fonts-master state=directory
+  when: ansible_os_family == "Darwin" and fonts_stat.stat.exists == False
+  tags: fonts
+
+- name: Unpack fonts
+  unarchive: >
+    copy=no
+    src=/tmp/powerline-fonts-master.zip
+    dest=/tmp/powerline-fonts-master
+  when: ansible_os_family == "Darwin" and fonts_stat.stat.exists == False
+  tags: fonts
+
+- name: Install fonts
+  command: /tmp/powerline-fonts-master/fonts-master/install.sh
+  when: ansible_os_family == "Darwin" and fonts_stat.stat.exists == False
+  tags: fonts
+
