@@ -18,6 +18,7 @@
       - importmagic
       - autopep8
       - yapf
+      - pygments
     extra_args: "--user"
 
 # @TODO: CentOS
