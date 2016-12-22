@@ -9,4 +9,15 @@
     - python3
   when: ansible_os_family == "Darwin"
 
+- name: Install pips
+  pip:
+    name:
+      - rope
+      - jedi
+      - flake8
+      - importmagic
+      - autopep8
+      - yapf
+    extra_args: "--user"
+
 # @TODO: CentOS
