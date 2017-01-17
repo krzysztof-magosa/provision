@@ -29,6 +29,7 @@ brews:
 
 casks:
   - google-chrome
+  - google-drive
   - vlc
   - keepassx
   - skype
