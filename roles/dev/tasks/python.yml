@@ -19,6 +19,7 @@
       - autopep8
       - yapf
       - pygments
+      - virtualenv
     extra_args: "--user"
 
 # @TODO: CentOS
