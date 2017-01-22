@@ -26,6 +26,8 @@ brews:
   - fzf
   - watson
   - global
+  - ncftp
+  - rmtrash
 
 casks:
   - google-chrome
