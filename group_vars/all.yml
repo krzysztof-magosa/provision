@@ -28,6 +28,7 @@ brews:
   - global
   - ncftp
   - rmtrash
+  - ag
 
 casks:
   - google-chrome
