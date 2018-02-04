@@ -6,9 +6,7 @@ brews:
   - tree
   - wget
   - tig
-  - fish
   - htop
-  - terminal-notifier
   - autoenv
   - resty
   - jq
@@ -24,7 +22,6 @@ casks:
   - google-drive
   - vlc
   - skype
-  - slack
   - spotify
   - iterm2
   - spectacle
