@@ -1,10 +1,5 @@
 ---
 
-- include: structure.yml
-  tags:
-    - dev
-    - dev_structure
-
 - include: cpp.yml
   tags:
     - dev
