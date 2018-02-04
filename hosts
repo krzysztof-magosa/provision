@@ -1,7 +1,2 @@
-[host]
-home-mbp
-work-mbp
-
-[vm]
-home-playground
-work-playground
+[laptops]
+laptop

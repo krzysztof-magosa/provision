@@ -1,14 +1,3 @@
-projects_path: ~/projects
-
-dotfiles_repo: git@github.com:krzysztof-magosa/dotfiles.git
-dotfiles_path: ~/.dotfiles
-dotfiles_init_cmd: ~/.dotfiles/install.sh --force
-
-emacsd_repo: git@github.com:krzysztof-magosa/emacs.d.git
-emacsd_path: ~/.emacs.d
-
-keepassx_db: "~/Google Drive/keepassx.kdbx"
-
 brews:
   - coreutils
   - emacs

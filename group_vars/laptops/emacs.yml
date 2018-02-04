@@ -1,0 +1,2 @@
+emacsd_repo: git@github.com:krzysztof-magosa/emacs.d.git
+emacsd_path: ~/.emacs.d

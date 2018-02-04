@@ -1,0 +1,3 @@
+dotfiles_repo: git@github.com:krzysztof-magosa/dotfiles.git
+dotfiles_path: ~/.dotfiles
+dotfiles_init_cmd: ~/.dotfiles/install.sh --force
