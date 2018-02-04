@@ -8,7 +8,6 @@
     PATH: "{{ ansible_env.PATH }}:/opt/homebrew/bin:{{ ansible_env.HOME }}/.rbenv/bin:{{ ansible_env.HOME }}/.rbenv/plugins/ruby-build/bin"
   roles:
     - jgkim.brew
-    - common
     - shell
     - dev
     - software
