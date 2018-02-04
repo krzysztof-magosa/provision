@@ -1,3 +1,0 @@
-- name: Install KeePassX
-  homebrew_cask:
-    name: keepassx
